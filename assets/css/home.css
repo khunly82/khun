@@ -1,0 +1,87 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 12px;
+}
+
+body {
+  margin: 0;
+  font-family: "Roboto";
+}
+
+header {
+  background-color: #27352A;
+  height: 300px;
+  padding: 20px 17.5%;
+  display: flex;
+  justify-content: space-between;
+}
+header > .left {
+  height: 50px;
+  display: flex;
+}
+header > .left > div {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: space-between;
+  padding-left: 10px;
+}
+header > .left > div > span {
+  color: white;
+}
+header > .left > div > span:first-child {
+  color: #82C46C;
+}
+header > .right {
+  height: 50px;
+  display: flex;
+  align-items: center;
+}
+header > .right > div {
+  height: 30px;
+  width: 30px;
+  transform: scaleX(-1);
+  cursor: pointer;
+  position: relative;
+}
+header > .right > div:hover > div {
+  background-color: #82C46C;
+}
+header > .right > div:hover > nav {
+  display: block;
+}
+header > .right > div > div {
+  background-color: #FFF;
+  height: 3px;
+  margin-bottom: 5px;
+}
+header > .right > div > div:nth-child(1) {
+  width: 33.3333333333%;
+}
+header > .right > div > div:nth-child(2) {
+  width: 66.6666666667%;
+}
+header > .right > div > div:nth-child(3) {
+  margin-bottom: unset;
+}
+header > .right > div > nav {
+  display: none;
+  position: absolute;
+  transform: scaleX(-1);
+}
+header > .right > div > nav > ul {
+  list-style: none;
+}
+header > .right > div > nav > ul > li > a {
+  color: #0C0F0C;
+  background-color: white;
+  padding: 10px 20px;
+  border: 1px dotted lightgray;
+  display: block;
+}
+
+/*# sourceMappingURL=home.css.map */
