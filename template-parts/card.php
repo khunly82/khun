@@ -21,7 +21,7 @@
     <div class="card-link">
         <!-- afficher le lien de l'article -->
         <a href="<?php the_permalink() ?>">
-            Lire plus <i class="fa fa-chevron-right"></i>
+            <?= __('read_more', 'khun') ?> <i class="fa fa-chevron-right"></i>
         </a>
     </div>
     <!-- afficher les categories -->

@@ -7,6 +7,9 @@ define('THEME_URI', get_stylesheet_directory_uri());
 
 // add_action permet d'exécuter une fonction à un moment donné (du cycle de vie du theme) 
 add_action('init', function(){
+
+    load_theme_textdomain('khun', get_template_directory() . '/languages' );
+
     // permet d'ajouter une fonctionalité wordpress 
     // ex logo, image des articles, ...
     add_theme_support('custom-logo',/* [

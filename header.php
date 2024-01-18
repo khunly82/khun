@@ -17,9 +17,9 @@
             <?php the_custom_logo() ?>
             <!-- <img src="<?= THEME_URI ?>/assets/images/logo.png" alt=""> -->
             <div>
-                <span>L'actionnariat</span>
-                <span>des entreprises</span>
-                <span>wallones</span>
+                <span><?= __('slogan_line_1', 'khun') ?></span>
+                <span><?= __('slogan_line_2', 'khun') ?></span>
+                <span><?= __('slogan_line_3', 'khun') ?></span>
             </div>
         </div>
 
