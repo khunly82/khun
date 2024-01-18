@@ -52,7 +52,6 @@ header {
         >div {
             height: 30px;
             width: 30px;
-            transform: scaleX(-1);
             cursor: pointer;
             position: relative;
             &:hover >div{
@@ -62,6 +61,7 @@ header {
                 display: block;
             }
             >div {
+                transform: scaleX(-1);
                 background-color: $white;
                 height: 3px;
                 margin-bottom: 5px;
@@ -78,9 +78,10 @@ header {
             >nav {
                 display: none;
                 position: absolute;
-                transform: scaleX(-1);
+                left: -100px;
                 >ul {
                     list-style: none;
+                    width: 200px;
                     >li {
                         >a {
                             color: $black;
@@ -88,6 +89,7 @@ header {
                             padding: 10px 20px;
                             border: 1px dotted lightgray;
                             display: block;
+                            text-decoration: none;
                         }
                     } 
                 }
@@ -128,6 +130,55 @@ footer {
         a {
             text-decoration: none;
             color: $black;
+        }
+    }
+}
+
+.card {
+    box-shadow: 0 5px 5px 0 lightgrey;
+    aspect-ratio: 2/3;
+    position: relative;
+    &-img {
+        height: 40%;
+        overflow: hidden;
+        >img {
+            height: auto;
+            width: 100%;
+        }
+    }
+    &-date {
+        padding: 10px 20px;
+        color: $green;
+        font-style: italic;
+        font-size: 1.25rem;
+    }
+    &-title {
+        padding: 10px 20px 0 20px;
+        font-weight: bold;
+        font-size: 2rem;
+        color: $forest;
+    }
+
+    &-content {
+        padding: 5px 20px;
+        font-size: 1.25rem;
+    }
+
+    &-link {
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+        > a {
+            color: $green;
+            text-decoration: none;
+            i {
+                transition: transform 0.3s ease;
+            }
+            &:hover {
+                i {
+                   transform: translateX(5px);
+                }
+            }
         }
     }
 }

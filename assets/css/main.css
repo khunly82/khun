@@ -51,7 +51,6 @@ header > .right {
 header > .right > div {
   height: 30px;
   width: 30px;
-  transform: scaleX(-1);
   cursor: pointer;
   position: relative;
 }
@@ -62,6 +61,7 @@ header > .right > div:hover > nav {
   display: block;
 }
 header > .right > div > div {
+  transform: scaleX(-1);
   background-color: #FFF;
   height: 3px;
   margin-bottom: 5px;
@@ -78,10 +78,11 @@ header > .right > div > div:nth-child(3) {
 header > .right > div > nav {
   display: none;
   position: absolute;
-  transform: scaleX(-1);
+  left: -100px;
 }
 header > .right > div > nav > ul {
   list-style: none;
+  width: 200px;
 }
 header > .right > div > nav > ul > li > a {
   color: #0C0F0C;
@@ -89,6 +90,7 @@ header > .right > div > nav > ul > li > a {
   padding: 10px 20px;
   border: 1px dotted lightgray;
   display: block;
+  text-decoration: none;
 }
 
 footer {
@@ -124,6 +126,51 @@ footer ul li:not(:last-child)::after {
 footer ul a {
   text-decoration: none;
   color: #0C0F0C;
+}
+
+.card {
+  box-shadow: 0 5px 5px 0 lightgrey;
+  aspect-ratio: 2/3;
+  position: relative;
+}
+.card-img {
+  height: 40%;
+  overflow: hidden;
+}
+.card-img > img {
+  height: auto;
+  width: 100%;
+}
+.card-date {
+  padding: 10px 20px;
+  color: #82C46C;
+  font-style: italic;
+  font-size: 1.25rem;
+}
+.card-title {
+  padding: 10px 20px 0 20px;
+  font-weight: bold;
+  font-size: 2rem;
+  color: #27352A;
+}
+.card-content {
+  padding: 5px 20px;
+  font-size: 1.25rem;
+}
+.card-link {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
+.card-link > a {
+  color: #82C46C;
+  text-decoration: none;
+}
+.card-link > a i {
+  transition: transform 0.3s ease;
+}
+.card-link > a:hover i {
+  transform: translateX(5px);
 }
 
 /*# sourceMappingURL=main.css.map */

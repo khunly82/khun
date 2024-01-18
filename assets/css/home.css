@@ -27,5 +27,13 @@ main .actu .top a {
   text-transform: uppercase;
   text-decoration: none;
 }
+main .actu .articles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+main .actu .articles > * {
+  width: calc((100% - 40px) / 3);
+}
 
 /*# sourceMappingURL=home.css.map */

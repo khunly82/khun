@@ -9,7 +9,7 @@ define('THEME_URI', get_stylesheet_directory_uri());
 add_action('init', function(){
     // permet d'ajouter une fonctionalité wordpress 
     // ex logo, image des articles, ...
-    add_theme_support('custom-logo', /*[
+    add_theme_support('custom-logo',/* [
         'height' => '50px',
         'width' => '100px'
     ]*/);
@@ -57,9 +57,25 @@ add_action('wp_enqueue_scripts', function() {
     }
 });
 
+// permet de modifier le comportement d'une fonction wordpress 
+// pour faire autre chose
+// add_filter('the_title', function($previous) {
+//     return '♣' . $previous . '♥';
+// });
+
+// si php 8.2
+// mofifier la fonction excerpt_length
+// pour changer le nombre de mots des resumées
+add_filter('excerpt_length', fn () => 25);
+
+// add_filter('excerpt_length', function () { return 25; });
+
 
 function getLastNews() {
-    // SELECT * FROM Content WHERE post_type = 'post' ORDER BY date DESC LIMIT 3
+    // SELECT * FROM Content 
+    // WHERE post_type = 'post' 
+    // ORDER BY date DESC 
+    // LIMIT 3
     return new WP_Query([
         'post_type' => 'post',
         'posts_per_page' => 3,
