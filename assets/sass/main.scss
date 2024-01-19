@@ -49,6 +49,7 @@ header {
         height: 50px;
         display: flex;
         align-items: center;
+        gap: 20px;
         >div {
             height: 30px;
             width: 30px;
@@ -73,6 +74,16 @@ header {
                 }
                 &:nth-child(3) {
                     margin-bottom: unset;
+                }
+            }
+            &.lang-selection {
+                width: unset;
+                > span {
+                    font-size: 1.5rem;
+                    color: white;
+                    &:hover {
+                        color: $green;
+                    }
                 }
             }
             >nav {

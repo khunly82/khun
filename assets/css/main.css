@@ -47,6 +47,7 @@ header > .right {
   height: 50px;
   display: flex;
   align-items: center;
+  gap: 20px;
 }
 header > .right > div {
   height: 30px;
@@ -74,6 +75,16 @@ header > .right > div > div:nth-child(2) {
 }
 header > .right > div > div:nth-child(3) {
   margin-bottom: unset;
+}
+header > .right > div.lang-selection {
+  width: unset;
+}
+header > .right > div.lang-selection > span {
+  font-size: 1.5rem;
+  color: white;
+}
+header > .right > div.lang-selection > span:hover {
+  color: #82C46C;
 }
 header > .right > div > nav {
   display: none;

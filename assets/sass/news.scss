@@ -1,0 +1,37 @@
+@import 'variables';
+
+main {
+    padding: 20px $x-padding;
+    .actu {
+        .top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            h1 {
+                text-transform: uppercase;
+                color: $green;
+                &::after {
+                    content: '';
+                    display: block;
+                    height: 2px;
+                    width: 100px;
+                    background: $green;
+                }
+            }
+            a {
+                font-weight: bold;
+                color: $black;
+                text-transform: uppercase;
+                text-decoration: none;
+            }
+        }  
+        .articles {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            > * {
+                width: calc((100% - 40px) / 3);
+            }
+        }
+    }
+}

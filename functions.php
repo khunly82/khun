@@ -56,7 +56,7 @@ add_action('wp_enqueue_scripts', function() {
 
     // si je suis sur la page des articles
     if(is_home()) {
-
+        wp_enqueue_style('news_css', THEME_URI . '/assets/css/news.css', ['main_css']);
     }
 });
 
