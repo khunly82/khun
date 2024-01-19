@@ -90,6 +90,7 @@ header > .right > div > nav {
   display: none;
   position: absolute;
   left: -100px;
+  z-index: 1000;
 }
 header > .right > div > nav > ul {
   list-style: none;

@@ -90,6 +90,7 @@ header {
                 display: none;
                 position: absolute;
                 left: -100px;
+                z-index: 1000;
                 >ul {
                     list-style: none;
                     width: 200px;
