@@ -1,11 +1,12 @@
-<?php 
-    get_header();
+<?php get_header();
+
+    // recupère la requète courante
+    global $wp_query;
+    
     $search_link = get_bloginfo('url') . get_locale() === 'fr_FR' ? '/articles' : '/en/news';
     
     // récupérer la page courante
     $currentPage = get_query_var('paged') === 0 ? 1 : get_query_var('paged');
-    
-    global $wp_query;
     
     // $wp_query->found_posts -> le nombre d'article trouvés
     // var_dump($wp_query->found_posts);die;
@@ -20,7 +21,7 @@
     <div class="search-content">
         <h1><?= __('news', 'khun') ?></h1>
         <form action="<?= $search_link ?>">
-            <!-- get_query_var() fonctionne comme $_GET[] en verifiant si la valeur  -->
+            <!-- get_query_var() fonctionne comme $_GET[] en verifiant si la valeur existe  -->
             <input name="s" 
                    value="<?= get_query_var('s') ?>"
                    placeholder="<?= __('find_news_placeholder', 'khun') ?>">
