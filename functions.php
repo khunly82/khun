@@ -49,6 +49,10 @@ add_action('wp_enqueue_scripts', function() {
         /*... */
     }
 
+    if(is_page('react')) {
+        wp_enqueue_script('app_react_js', THEME_URI . '/assets/js/react/index.js', [], null, true);
+    }
+
     // si je suis sur la page d'un article
     if(is_single()) {
 

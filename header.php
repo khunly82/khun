@@ -48,7 +48,7 @@
                 <span><?= get_locale()[0] . get_locale()[1] ?> <i class="fa fa-caret-down"></i></span>
                 <!-- <span><?= explode('_', get_locale())[0] ?></span>
                 <span><?= preg_replace('/_.+/', '', get_locale()) ?></span> -->
-                <!-- <span><?= substr(get_locale(),0,2) ?></span> --> -->
+                <!-- <span><?= substr(get_locale(),0,2) ?></span> -->
                 <nav>
                     <ul>
                         <!-- afficher les liens vers les différentes langues -->
