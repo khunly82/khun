@@ -64,3 +64,33 @@ main {
         }
     }
 }
+
+.pagination {
+    background-color: $beige;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 $x-padding;
+    > div {
+        font-size: 1.2rem;
+        > a {
+            text-decoration: none;
+            color: black;
+            > i {
+                font-size: 1.5rem;
+            }
+            &:hover {
+                color: $green;
+            }
+        }
+        &:nth-child(2) {
+            > span {
+                margin: 0 3px;
+                &:nth-child(2) {
+                    color: $green;
+                }
+            }
+        }
+    }
+}
